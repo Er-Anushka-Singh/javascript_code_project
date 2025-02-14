@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Check Identical Product</title>
+</head>
+<body>
+  <script>
+    // let name = { Dog : 'Lucy'};
+    // let pet = {Dog:'Lucy'};
+    //  name ={Cat : 'guchi'};
+    //  pet = {cat : 'Lucy'}
+    //  console.log(name.Dog == pet.Dog);
+    //  console.log(name.Dog == name.Cat);
+    //  console.log(name.Dog == name.cat);
+
+
+    let product1 = {
+      name : 'Jeans',
+      size :'S',
+      fit : 'Slim Fit',
+    };
+
+    function isIdenticalProduct(product1 , product2){
+      if(typeof product1 !== 'object' || typeof product1 !== 'object'){
+        console.warn('Parameter passed was not an object');
+        return false;
+      }
+      if(product1 == product2){
+        return true;
+      }
+      if( product1.name === product2.name &&
+      product1.size === product2.size &&
+      product1.fit === product2.fit
+      ){
+      return true;
+      }else{
+        return false;
+      }
+    }
+    let product2 = {
+      name : 'Jeans',
+      size :'M',
+      fit : 'Slim Fit',
+    };
+    let product3 = {
+      name : 'Jeans',
+      size :'S',
+      fit : 'Slim Fit',
+    };
+    console.log(isIdenticalProduct(product1,''));
+    console.log(isIdenticalProduct(product1,product1));
+    console.log(isIdenticalProduct(product3,product2));
+    console.log(isIdenticalProduct(product1,product3));
+  </script>
+</body>
+</html>

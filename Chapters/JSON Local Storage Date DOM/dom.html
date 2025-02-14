@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DOM</title>
+</head>
+<body>
+  <div class="my-div">This is the div</div>
+  <script>
+    let button = document.createElement('Button');
+    button.innerText = 'Click Me';
+    document.querySelector('.my-div').appendChild(button);
+    document.querySelector('.my-div').removeChild(button);
+  </script>
+</body>
+</html>

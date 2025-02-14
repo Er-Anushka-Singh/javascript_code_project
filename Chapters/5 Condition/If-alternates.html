@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>If alternate</title>
+</head>
+<body>
+  <script>
+    // Ternary Operator
+    console.log('Ternary Operator');
+     let age = 12;
+    // let result;
+    // if(age>18){
+    //   console.log('Adult');
+    // }
+    // else{
+    //   console.log('kid');
+    // }
+    let result = age>18? 'Adult':'kid';
+    console.log(result);
+     
+    console.log('Guard Operator');
+    // Guard Operator  --> Fallback
+
+    let Age =32;
+    let finalAge = Age || 18;
+    console.log(Age);
+    console.log(finalAge);
+
+    // default operator  --> use only null and undefined as falsy
+    let AGE ;
+    let FinalAge = AGE ?? 18;
+    console.log(AGE);
+    console.log(FinalAge);
+  </script>
+</body>
+</html>

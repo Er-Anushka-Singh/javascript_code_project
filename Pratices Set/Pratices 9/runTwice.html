@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Function Run Twice</title>
+</head>
+<body>
+  <script>
+
+    //  ** This is all about my mistake to understand the question.**
+
+  //  let Multiply= function MultiplyTwoNumber(num1, num2){
+  //     return num1 * num2;
+  //       }
+
+  //   let runTwice = function(num1 , num2 , num3 , MultiplyTwoNumber){
+  //     multiply= MultiplyTwoNumber(num1 ,num2);
+  //     return MultiplyTwoNumber(multiply,num3);
+  //   }
+
+  //   console.log(runTwice(4,5,6,Multiply));
+
+  
+  // This is the Correct one
+
+    let printGreeting = () => console.log('Namste');
+
+    let runTwice = inputfunction =>{
+      inputfunction();
+      inputfunction();
+    }
+
+    runTwice(printGreeting);
+      
+   
+  </script>
+</body>
+</html>

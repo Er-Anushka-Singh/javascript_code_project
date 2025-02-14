@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Button</title>
+  <style>
+      .my-button{
+        height: 50px;
+        width: 50px;
+        font-size: 25px;
+        border: none;
+        border-radius: 10px;
+      }
+      .js-odd{
+        background-color: rgb(113, 113, 223);
+      }
+      .js-even{
+        background-color: rgb(105, 224, 105);
+      }
+  </style>
+</head>
+<body>
+  <button class="my-button" onclick="
+    buttonPressed();">
+     
+  </button>
+  
+  <script>
+    let noOfTimeClicked =localStorage.getItem('noOfTimeClicked') || 0 ;
+     function buttonPressed(){
+      noOfTimeClicked++;
+      localStorage.setItem('noOfTimeClicked', noOfTimeClicked);
+      updateButton();
+     }
+      
+     function updateButton(){
+      let button = document.querySelector('.my-button');
+   
+      if(noOfTimeClicked % 2=== 0){
+        button.classList.remove('js-odd');
+        button.classList.add('js-even');
+      }else{
+        button.classList.remove('js-even');
+        button.classList.add('js-odd');
+      }
+      button.innerText = noOfTimeClicked;
+     }
+    
+    updateButton();
+     
+
+  </script>
+</body>
+</html>

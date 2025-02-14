@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Object with Two Reference</title>
+</head>
+<body>
+  <script>
+    let product = {
+      name : 'Jeans',
+      size :'S',
+      fit : 'Slim Fit',
+    };
+    let copyProduct = product;
+    console.log(product);
+
+    copyProduct.size ='M';
+    console.log(product);
+    
+    copyProduct.fit= 'Regular fit';
+    console.log(product);
+
+  </script>
+</body>
+</html>

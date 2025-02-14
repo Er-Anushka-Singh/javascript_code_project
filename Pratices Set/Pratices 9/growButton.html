@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Button grow</title>
+  <style>
+    .grow-button{
+      font-size: 15px;
+      height: 20px;
+      width: 80px;
+      background-color: rgb(231, 9, 9);
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    .js-size-double{
+      font-size: 30px;
+      height: 40px ;
+      width: 160px;
+    }
+    
+  </style>
+</head>
+<body>
+  <button class="grow-button ">Subscribe</button>
+  <script>
+     function grow(){
+      let buttonElement = document.querySelector('.grow-button');
+     let behaviour= buttonElement.classList.add('js-size-double');
+
+     }
+     let buttonElement = document.querySelector('.grow-button');
+    
+
+      buttonElement.addEventListener('click',event =>setTimeout(grow,2000));
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Slice Method</title>
+</head>
+<body>
+  <script>
+    let arr =[6,5,4,7,9,3,5];
+    console.log(arrCopy(arr));
+    
+   arr2= arr.slice(1,4);
+    arr2[0]= null;
+    console.log(arr2);
+    console.log(arr);
+
+
+    function arrCopy(arr){
+      return arr.slice(0, arr.length);
+    }
+
+
+  </script>
+</body>
+</html>

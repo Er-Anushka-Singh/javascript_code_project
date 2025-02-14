@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>For Each Loop</title>
+</head>
+<body>
+  <script>
+    let foods = ['Milk','rice','bread','meat','pizza'];
+    // foods.forEach(function(food){
+    //   console.log(food);
+    // })
+   
+    // foods.forEach(food => console.log(food));
+
+
+    let arr = [3,5,7,9];
+
+    // not good for finding single element 
+    // here return --> statement work like a continous key word.  And there is no break out .
+    arr.forEach(num => {
+      if(num === 5){
+        return ;
+      }
+      console.log(`visited : ${num}`);
+    })
+
+
+    function search(arr,num){
+      for(let i=0; i<arr.length; i++){
+        if(arr[i]===num){
+          console.log(`element found at : ${i}`);
+          return;
+        }
+      }
+      console.log('Element was not found');
+    }
+
+   // search(arr,10);
+
+
+  </script>
+</body>
+</html>
